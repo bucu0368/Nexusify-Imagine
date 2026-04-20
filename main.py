@@ -7,7 +7,7 @@ from flask import Flask, request, jsonify, Response
 
 app = Flask(__name__)
 
-API_KEY = "sk_39c982b121d4c998671f928d0d26c297199dda82495ec88e37a51bbafe92b663"
+API_KEY = os.getenv("API_KEY")
 API_URL = "https://api.nexusify.co/v1/generate-image"
 
 image_cache = {}
